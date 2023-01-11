@@ -1,9 +1,11 @@
 # Taglich
-Your one stop shop for your daily needs. One day will be a microservice :rocket:
 
-### what I'll learn 
+### ...
 
 - Authentication & Authorization
+- Scaling flash sales & Payments
+- Site bounce rate, SEO, analytics, and more
+- Google maps 
 - DB & Complex roles
 - APIs best practices [ ]
-- Caching and much more...
+- Caching, channels: [email, notifications]
