@@ -3,7 +3,7 @@ var formidable = require("express-formidable");
 var cors = require("cors");
 var app = express();
 var port = process.env.PORT || 6500;
-var frontend = process.env.FRONTEND // || process.env.PRODUCTION_URL
+var frontend = 'https://remo-core-app.vercel.app'|| process.env.PRODUCTION_URL
 
 const python = require("./services/python");
 
