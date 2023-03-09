@@ -29,8 +29,8 @@ LABEL description="This is a container. It works on my machine, on my container 
 
 # docker images: verify the image
 
-COPY ./core/package.json ./
-COPY ./core/yarn.lock ./
+COPY ./package.json ./
+COPY ./yarn.lock ./
 
 RUN npm install --only=production
 
