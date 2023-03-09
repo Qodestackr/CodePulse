@@ -34,7 +34,7 @@ COPY ./yarn.lock ./
 
 RUN npm install --only=production
 
-COPY ./core .
+COPY ./ .
 
 # copies the rest of the files in the core directory 
 # from the host machine to the Docker image, and EXPOSE sets the container port to 8080.
