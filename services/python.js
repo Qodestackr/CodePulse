@@ -1,5 +1,5 @@
 const fs = require("fs");
-const exec = require("child_process").exec;
+const exec = require("child_process").exec; //
 const { v1: uuidv1 } = require("uuid");
 const config = require("./config");
 const env = process.env.NODE_ENV;
