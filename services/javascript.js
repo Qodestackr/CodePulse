@@ -15,6 +15,7 @@ const validate = (str) => {
   });
 
   return valid;
+
 };
 
 const runCode = (code, func) => {

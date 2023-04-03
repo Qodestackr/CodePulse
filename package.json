@@ -14,7 +14,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
-    "uuid": "^8.2.0"
+    "uuid": "^8.2.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

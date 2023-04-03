@@ -12,22 +12,17 @@ RUN  apt-get install -y apt-utils
 RUN apt-get install -y python3
 RUN apt-get install -y nodejs npm
 
+# RUN apk add --no-cache openjdk8
+# ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+# ENV PATH="$JAVA_HOME/bin:${PATH}"
+# RUN apk add --no-cache rust
+# RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing mono
+
+RUN npm install -g typescript
+RUN npm install -g ts-node
+
 LABEL version="1.0.0"
 LABEL description="This is a container. It works on my machine, on my container to be precise!"
-
-# update the package list, then install dependencies: Node/Python with apt-get utility
-# installing latest npm version
-# Tip: the installation is global, make sure its the "sudo mode"
-# Clean up the apt cache: reduces the image size
-
-# By using the "no-cache" option, we ensure that we get the latest version of the packages every time we build the image.
-# For compatibility reasons
-
-# /tmp: This directory contains temporary files that are created by programs running on the system.
-
-# /var: This directory contains variable data files that change | frequently during the system's operation. e.g log files etc
-
-# docker images: verify the image
 
 COPY ./package.json ./
 COPY ./yarn.lock ./
