@@ -6,13 +6,14 @@ const logger = winston.createLogger({
     defaultMeta: { service: 'remo-service' },
     format: winston.format.combine(
 
-        winston.format.label({ label: `Label🏷️` }),
+        winston.format.label({ label: `Log label🏷️` }),
         winston.format.timestamp({ format: 'MMM-DD-YYYY HH:mm:ss' }),
         winston.format.json(),
 
     ),
     transports: [
-        new winston.transports.File({ filename: `${uuidv1()}-info-logs.log` }),
+        new winston.transports.File({ filename: `logs/${uuidv1()}-info-logs.log` }),
+        new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     ],
 });
 
@@ -26,7 +27,8 @@ function logInfo(info) {
         http_method,
         request_url,
         request_headers,
-        response_status
+        response_status,
+        code
     } = info
 
     logger.info({
@@ -39,7 +41,8 @@ function logInfo(info) {
         http_method,
         request_url,
         request_headers,
-        response_status
+        response_status,
+        code
     });
 }
 
