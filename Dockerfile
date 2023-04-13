@@ -1,21 +1,14 @@
 # Base image
-
-# This command looks for the base image in the local system. If not present, pulls it from the registry
-FROM ubuntu:latest
+FROM node:19
 
 # Dockerfile is a script that contains instructions to build the Docker image.
 LABEL name="Wilson_Gichu"
 
-RUN apt-get update && apt-get upgrade -y
-# apt-utils porvide utilities for debian packages 
-RUN  apt-get install -y apt-utils 
-RUN apt-get install -y python3
-RUN apt-get install -y nodejs npm
+# Install apt-utils and python3 as needed
+RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-utils && apt-get install -y python3
 
-# RUN apk add --no-cache openjdk8
-
-RUN npm install -g typescript
-RUN npm install -g ts-node
+# Install TypeScript and ts-node
+RUN npm install -g typescript ts-node
 
 LABEL version="1.0.0"
 LABEL description="This is a container. It works on my machine, on my container to be precise!"
