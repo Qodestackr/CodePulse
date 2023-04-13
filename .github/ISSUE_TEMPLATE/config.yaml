@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/Qodestackr/CodePulse/discussions
+    about: Ask questions and discuss topics with other community members
+  - name: Documentation Request
+    url: https://github.com/Qodestackr/CodePulse/issues/new/choose?template=documentation-request.md
+    about: Request for documentation to be added/altered
+  - name: Chat with other community members
+    url: https://discord.gg/your-discord-link
+    about: The official CodePulse Discord community
