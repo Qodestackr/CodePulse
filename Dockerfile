@@ -4,7 +4,7 @@
 FROM ubuntu:latest
 
 # Dockerfile is a script that contains instructions to build the Docker image.
-MAINTAINER Wilson_Gichu
+LABEL name="Wilson_Gichu"
 
 RUN apt-get update && apt-get upgrade -y
 # apt-utils porvide utilities for debian packages 
@@ -13,10 +13,6 @@ RUN apt-get install -y python3
 RUN apt-get install -y nodejs npm
 
 # RUN apk add --no-cache openjdk8
-# ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
-# ENV PATH="$JAVA_HOME/bin:${PATH}"
-# RUN apk add --no-cache rust
-# RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing mono
 
 RUN npm install -g typescript
 RUN npm install -g ts-node
@@ -31,8 +27,6 @@ RUN npm install --only=production
 
 COPY ./ .
 
-# copies the rest of the files in the core directory 
-# from the host machine to the Docker image, and EXPOSE sets the container port to 8080.
 EXPOSE 8080
 
 CMD [ "node", "Server.js" ]
